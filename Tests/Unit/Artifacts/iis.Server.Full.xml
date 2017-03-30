@@ -1,0 +1,10 @@
+<iis.Server id="Infrastructure/overthereHost/overthereHost-IIS" >
+  <tags>
+    <value>tag1</value>
+    <value>tag2</value>
+  </tags>
+  <deploymentGroup>1</deploymentGroup>
+  <deploymentSubGroup>1</deploymentSubGroup>
+  <deploymentSubSubGroup>1</deploymentSubSubGroup>
+  <host ref="Infrastructure/overthereHost" />
+</iis.Server>

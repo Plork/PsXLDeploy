@@ -1,0 +1,11 @@
+<udm.Environment id="Environments/Environment">
+  <members>
+    <ci ref="container1" />
+    <ci ref="container2" />
+  </members>
+  <dictionaries>
+    <ci ref="dictionary1" />
+    <ci ref="dictionary2" />
+  </dictionaries>
+  <triggers />
+</udm.Environment>

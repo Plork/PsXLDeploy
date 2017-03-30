@@ -1,0 +1,18 @@
+<overthere.SshHost id="Infrastructure/overthereHost">
+    <tags />
+    <deploymentGroup>1</deploymentGroup>
+    <deploymentSubGroup>1</deploymentSubGroup>
+    <deploymentSubSubGroup>1</deploymentSubSubGroup>
+    <os>UNIX</os>
+    <puppetPath>/usr/local/bin</puppetPath>
+    <connectionType>SUDO</connectionType>
+    <address>127.0.0.1</address>
+    <port>1</port>
+    <username>username</username>
+    <password>password</password>
+    <privateKeyFile>privateKeyFile</privateKeyFile>
+    <passphrase>passphrase</passphrase>
+    <sudoUsername>sudoUsername</sudoUsername>
+    <suUsername>suUsername</suUsername>
+    <suPassword>suPassword</suPassword>
+</overthere.SshHost>

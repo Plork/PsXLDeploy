@@ -1,0 +1,54 @@
+{
+  "version": "0.1.0",
+  // Start PowerShell
+  "command": "${env.windir}\\sysnative\\windowspowershell\\v1.0\\PowerShell.exe",
+  // The command is a shell script
+  "isShellCommand": true,
+  // Show the output window always
+  "showOutput": "always",
+  "args": [
+    "-NoProfile",
+    "-ExecutionPolicy",
+    "Bypass"
+  ],
+  "tasks": [
+    {
+      "taskName": "Import",
+      "suppressTaskName": true,
+      "isBuildCommand": true,
+      "args": [
+        "Write-Host 'Importing Module...';Import-Module ${workspaceRoot}\\PsXLDeploy\\PsXLDeploy.psd1 -Force;",
+        "Invoke-Command { Write-Host \"Imported Module PsXldeploy\" }"
+      ]
+    },
+    {
+      "taskName": "Pester",
+      "suppressTaskName": true,
+      "isTestCommand": true,
+      "args": [
+        "Write-Host 'Invoking Pester...'; Invoke-Pester -PesterOption @{IncludeVSCodeMarker=$true};",
+        "Invoke-Command { Write-Host \"Completed all tests tasks in task runner\" }"
+      ],
+      "problemMatcher": [
+        {
+          "owner": "powershell",
+          "fileLocation": [
+            "absolute"
+          ],
+          "severity": "error",
+          "pattern": [
+            {
+              "regexp": "^\\s*(\\[-\\]\\s*.*?)(\\d+)ms\\s*$",
+              "message": 1
+            },
+            {
+              "regexp": "^\\s+at\\s+[^,]+,\\s*(.*?):\\s+line\\s+(\\d+)$",
+              "file": 1,
+              "line": 2
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

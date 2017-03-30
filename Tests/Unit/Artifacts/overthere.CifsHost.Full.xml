@@ -1,0 +1,19 @@
+<overthere.CifsHost id="Infrastructure/overthereHost">
+    <tags>
+        <value>tag1</value>
+        <value>tag2</value>
+    </tags>
+    <deploymentGroup>1</deploymentGroup>
+    <deploymentSubGroup>1</deploymentSubGroup>
+    <deploymentSubSubGroup>1</deploymentSubSubGroup>
+    <os>WINDOWS</os>
+    <puppetPath>/usr/local/bin</puppetPath>
+    <connectionType>WINRM_NATIVE</connectionType>
+    <address>127.0.0.1</address>
+    <port>1</port>
+    <cifsPort>1</cifsPort>
+    <username>username</username>
+    <password>password</password>
+    <winrmEnableHttps>true</winrmEnableHttps>
+    <winrsAllowDelegate>true</winrsAllowDelegate>
+</overthere.CifsHost>

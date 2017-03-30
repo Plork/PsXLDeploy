@@ -1,0 +1,18 @@
+<udm.Dictionary id="Environments/Dictionary">
+  <entries>
+    <entry key="key1">value1</entry>
+    <entry key="key2">value2</entry>
+  </entries>
+  <encryptedEntries>
+    <entry key="key1">e{{b64}rFlF7BQ0YZgwjter+XZXUg==}</entry>
+    <entry key="key2">e{{b64}5yN4TpT9oYXFddtN79zpSw==}</entry>
+  </encryptedEntries>
+  <restrictToContainers>
+    <ci ref="container1" />
+    <ci ref="container2" />
+  </restrictToContainers>
+  <restrictToApplications>
+    <ci ref="application1" />
+    <ci ref="application2" />
+  </restrictToApplications>
+</udm.Dictionary>
